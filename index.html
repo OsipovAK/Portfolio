@@ -7,46 +7,54 @@
 		<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-		<link rel="manifest" href="img/site.webmanifest">
 		<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" type="text/css" href="CSS/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
 		<link rel="stylesheet" href="font-awesome/css/all.min.css">
-		<script src="JS/jquery-3.3.1.min.js"></script>
-        <script src="JS/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<script src="js/swiper.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		
+        <script src="js/script.js"></script>
 	</head>
 <body>
 	<header>
-		<div class="symbols">
-			<div class="symbols__gradients symbol1 moveLeft">{&nbsp;}</div>
-			<div class="symbols__gradients symbol2 moveLeft">#</div>
-			<div class="symbols__gradients symbol3 moveRight">&lt;div&gt;</div>
-			<div class="symbols__gradients symbol4 moveLeft">&lt;/&gt;</div>
-			<div class="symbols__gradients symbol5 moveRight">&lt;div&gt;</div>
-		</div>
 		<div class="wrapper">
-			<ul>
-				<li><a href="#">Услуги!</a></li>
-				<li><a href="#">Портфолио</a></li>
-				<li><a href="#">Стоимость</a></li>
-			</ul>
-			<div class="pic"><img src="img/person.png" alt="person"></div>
-			<div class="layer">
-				<img src="img/figure.svg" alt="figure">
-			</div>
+			<nav>
+				<input type="checkbox" id="responsive_menu" />
+				<ul class="top-menu">
+					<li><a href=".works" class="anchor">Услуги</a></li>
+					<li><a href=".examples" class="anchor">Портфолио</a></li>
+					<li><a href=".price" class="anchor">Стоимость</a></li>
+					<li class="close"><label for="responsive_menu"><i class="fas fa-times"></i></label></li>
+				</ul>
+				<label for="responsive_menu"><i class="fas fa-bars"></i></label>
+			</nav>
 			<div class="contact">
 				<a href="tel:+74999955577">+7 (499) 995-55-77</a>
 				<button>Заказать звонок</button>
 			</div>
 		</div>
-		<div class="person">
-			<p>Дмитрий Алексеев</p>
-			<p>Frontend-разработчик и веб-верстальщик</p>
-			<button>Узнать больше</button>
-		</div>
 	</header>
-	<div class="works">
+	<section class="about">
+		<div class="symbols">
+			<div class="symbols__symbol symbols__symbol_pos1 symbols__symbol_moveLeft">{&nbsp;}</div>
+			<div class="symbols__symbol symbols__symbol_pos2 symbols__symbol_moveLeft">#</div>
+			<div class="symbols__symbol symbols__symbol_pos3 symbols__symbol_moveRight">&lt;div&gt;</div>
+			<div class="symbols__symbol symbols__symbol_pos4 symbols__symbol_moveLeft">&lt;/&gt;</div>
+			<div class="symbols__symbol symbols__symbol_pos5 symbols__symbol_moveRight">&lt;div&gt;</div>
+		</div>
+		<div class="wrapper">
+			<div class="pic"><img src="img/person.png" alt="person"></div>
+			<div class="person">
+				<h1>Дмитрий Алексеев</h1>
+				<p>Frontend-разработчик и веб-верстальщик</p>
+				<button>Узнать больше</button>
+			</div>
+		</div>
+	</section>
+	<section class="works">
 		<div class="wrapper">
 			<h2>Что я делаю</h2>
 			<div class="services">
@@ -57,60 +65,72 @@
 			</div>
 			<button>Узнать стоимость</button>
 		</div>
-	</div>
-	<div class="examples">
+	</section>
+	<section class="examples">
 		<div class="wrapper">
 			<h2>Примеры моих работ</h2>
-			<div class="example">
-				<button class="example__examples-btnLeft"><img alt="pic" src="img/arrow.png" class="arrow"></button>
-				<div class="example__service2"><img alt="pic" src="img/Rectangle1.png"><p>Сайт психолога Веры Антоновой</p></div>
-				<div class="example__service2"><img alt="pic" src="img/Rectangle2.png"><p>Сайт магазина детской одежды</p></div>
-				<div class="example__service2"><img alt="pic" src="img/Rectangle3.png"><p>Сайт магазина «Рыболов»</p></div>
-				<button class="example__examples-btnRight"><img alt="pic" src="img/arrow.png" class="arrow"></button>
+			<div class="swiper-button-prev"></div>
+	    <div class="swiper-button-next"></div>
+			<div class="swiper-container examples">
+			    <div class="swiper-wrapper">
+			        <!-- Slides -->
+			        <div class="swiper-slide"><div class="example__service2"><img alt="hypno" src="img/Rectangle1.png"><p>Сайт психолога Веры Антоновой</p></div></div>
+			        <div class="swiper-slide"><div class="example__service2"><img alt="child" src="img/Rectangle2.png"><p>Сайт магазина детской одежды</p></div></div>
+			        <div class="swiper-slide"><div class="example__service2"><img alt="fish" src="img/Rectangle3.png"><p>Сайт магазина «Рыболов»</p></div></div>
+			    </div>
 			</div>
+	  <!-- Initialize Swiper -->
+		  <script>
+		    var swiper = new Swiper('.swiper-container', {
+		      slidesPerView: 3,
+		      spaceBetween: 30,
+		      loop: true,
+		      navigation: {
+		        nextEl: '.swiper-button-next',
+		        prevEl: '.swiper-button-prev',
+		      },
+		    });
+		  </script>
 			<button class="examples__button">Заказать проект</button>
 		</div>
-	</div>
-	<div class="gradient">
-		<div class="symbols">
-			<div class="symbols__gradients_off symbol6 moveRight">{&nbsp;}</div>
-			<div class="symbols__gradients_off symbol7 moveLeft">#</div>
-			<div class="symbols__gradients_off symbol8 moveLeft">{&nbsp;}</div>
-			<div class="symbols__gradients_off symbol9 moveRight">&lt;/&gt;</div>
-			<div class="symbols__gradients_off symbol10 moveRight">&lt;div&gt;</div>
-		</div>
+	</section>
+	<section class="price">
+		<div class="prise__symbol prise__symbol_pos6 symbols__symbol_moveRight">{&nbsp;}</div>
+		<div class="prise__symbol prise__symbol_pos7 symbols__symbol_moveLeft">#</div>
+		<div class="prise__symbol prise__symbol_pos8 symbols__symbol_moveLeft">{&nbsp;}</div>
+		<div class="prise__symbol prise__symbol_pos9 symbols__symbol_moveRight">&lt;/&gt;</div>
+		<div class="prise__symbol prise__symbol_pos10 symbols__symbol_moveRight">&lt;div&gt;</div>
 		<div class="wrapper">
 			<h2>Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за 4 часа.*</h2>
 			<p>* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, <br>в зависимости от сложности задач.</p>
 		</div>
-	</div>
-	<div class="upFooter">
-		<div class="wrapper2">
-			<div class="upFooter__cont">
-				<ul>
-					<li><a href="#">Услуги</a></li>
-					<li><a href="#">Портфолио</a></li>
-					<li><a href="#">Стоимость</a></li>
-				</ul>
-			</div>
-			<div class="upFooter__cont2">
-				<div><i class="fa fa-phone" aria-hidden="true"></i><span>+7 (499) 995-77-55</span></div>
-				<div><i class="fa fa-envelope" aria-hidden="true"></i><span>dmitry@alekseev.com</span></div>
-			</div>
-			<div class="upFooter__cont">
-				<button>Заказать звонок</button>
-				<div class="share">
-					<div class="shar1 icon"></div>
-					<div class="shar2 icon"></div>
-					<div class="shar3 icon"></div>
-					<div class="shar4 icon"></div>
-				</div>
-
-			</div>
-		</div>
-	</div>
+	</section>
 	<footer>
 		<div class="wrapper">
+			<div class="menu">
+				<nav>
+					<ul>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Портфолио</a></li>
+						<li><a href="#">Стоимость</a></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="contacts">
+				<a href="tel:+1234567890"><i class="fa fa-phone" aria-hidden="true"></i><span>+7 (499) 995-77-55</span></a>
+				<a href="mailto: example@mail.ru"><i class="fa fa-envelope" aria-hidden="true"></i><span>dmitry@alekseev.com</span></a>
+			</div>
+			<div class="social">
+				<button>Заказать звонок</button>
+				<ul class="share">
+						<li><a href="#" class="share__icon share__icon_shar1"></a></li>
+						<li><a href="#" class="share__icon share__icon_shar2"></a></li>
+						<li><a href="#" class="share__icon share__icon_shar3"></a></li>
+						<li><a href="#" class="share__icon share__icon_shar4"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="copyright">
 			<p>&copy; Дмитрий Алексеев, 2016 - 2018</p>
 		</div>
 	</footer>

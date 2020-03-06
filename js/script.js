@@ -1,12 +1,5 @@
-    var swiper = new Swiper('.swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-    
-$(function(){
-	$('.anchor').click((e) => {
+$(function () {
+	$('.header__link').click((e) => {
 		e.preventDefault();
 		let href = $(e.currentTarget).attr('href');
 
@@ -18,3 +11,36 @@ $(function(){
 	});
 });
 
+$(document).ready(function () {
+	$(".show-popup").click(function () {
+		$(".popup").show();
+		$('body').addClass("stop-scrolling");
+		disableScroll();
+
+	});
+
+	$(".popup").click(function (event) {
+		if (event.target == this) {
+			$(this).hide();
+			$('body').removeClass("stop-scrolling");
+			enableScroll();
+		};
+	});
+});
+
+$(document).ready(function () {
+	$(".show-popup2").click(function () {
+		$(".popup2").show();
+		$('body').addClass("stop-scrolling");
+		disableScroll();
+
+	});
+
+	$(".popup2").click(function (event) {
+		if (event.target == this) {
+			$(this).hide();
+			$('body').removeClass("stop-scrolling");
+			enableScroll();
+		};
+	});
+});

@@ -1,138 +1,245 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Портфолио</title>
-		<link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-		<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
-		<meta name="msapplication-TileColor" content="#da532c">
-		<meta name="theme-color" content="#ffffff">
-		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
-		<link rel="stylesheet" href="font-awesome/css/all.min.css">
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
-		<script src="js/swiper.min.js"></script>
-		<script src="js/jquery-3.3.1.min.js"></script>
-		
-        <script src="js/script.js"></script>
-	</head>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио</title>
+  <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+  <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+  <link rel="stylesheet" href="font-awesome/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <script src="js/swiper.min.js"></script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/script.js"></script>
+</head>
+
 <body>
-	<header>
-		<div class="wrapper">
-			<nav>
-				<input type="checkbox" id="responsive_menu" />
-				<ul class="top-menu">
-					<li><a href=".works" class="anchor">Услуги</a></li>
-					<li><a href=".examples" class="anchor">Портфолио</a></li>
-					<li><a href=".price" class="anchor">Стоимость</a></li>
-					<li class="close"><label for="responsive_menu"><i class="fas fa-times"></i></label></li>
-				</ul>
-				<label for="responsive_menu"><i class="fas fa-bars"></i></label>
-			</nav>
-			<div class="contact">
-				<a href="tel:+74999955577">+7 (499) 995-55-77</a>
-				<button>Заказать звонок</button>
-			</div>
-		</div>
-	</header>
-	<section class="about">
-		<div class="symbols">
-			<div class="symbols__symbol symbols__symbol_pos1 symbols__symbol_moveLeft">{&nbsp;}</div>
-			<div class="symbols__symbol symbols__symbol_pos2 symbols__symbol_moveLeft">#</div>
-			<div class="symbols__symbol symbols__symbol_pos3 symbols__symbol_moveRight">&lt;div&gt;</div>
-			<div class="symbols__symbol symbols__symbol_pos4 symbols__symbol_moveLeft">&lt;/&gt;</div>
-			<div class="symbols__symbol symbols__symbol_pos5 symbols__symbol_moveRight">&lt;div&gt;</div>
-		</div>
-		<div class="wrapper">
-			<div class="pic"><img src="img/person.png" alt="person"></div>
-			<div class="person">
-				<h1>Дмитрий Алексеев</h1>
-				<p>Frontend-разработчик и веб-верстальщик</p>
-				<button>Узнать больше</button>
-			</div>
-		</div>
-	</section>
-	<section class="works">
-		<div class="wrapper">
-			<h2>Что я делаю</h2>
-			<div class="services">
-				<div class="services__service"><img alt="pic" src="img/tools-and-utensils.png"><p>Вёрстка лендинг–страниц и&nbsp;сайтов любой сложности</p></div>
-				<div class="services__service"><img alt="pic" src="img/responsive.png"><p>Адаптивная вёрстка под&nbsp;все браузеры и устройства</p></div>
-				<div class="services__service"><img alt="pic" src="img/programming.png"><p>Frontend–разработка и программирование</p></div>
-				<div class="services__service"><img alt="pic"  src="img/coding.png"><p>Исправление и доработка существующей вёрстки</p></div>
-			</div>
-			<button>Узнать стоимость</button>
-		</div>
-	</section>
-	<section class="examples">
-		<div class="wrapper">
-			<h2>Примеры моих работ</h2>
-			<div class="swiper-button-prev"></div>
-	    <div class="swiper-button-next"></div>
-			<div class="swiper-container examples">
-			    <div class="swiper-wrapper">
-			        <!-- Slides -->
-			        <div class="swiper-slide"><div class="example__service2"><img alt="hypno" src="img/Rectangle1.png"><p>Сайт психолога Веры Антоновой</p></div></div>
-			        <div class="swiper-slide"><div class="example__service2"><img alt="child" src="img/Rectangle2.png"><p>Сайт магазина детской одежды</p></div></div>
-			        <div class="swiper-slide"><div class="example__service2"><img alt="fish" src="img/Rectangle3.png"><p>Сайт магазина «Рыболов»</p></div></div>
-			    </div>
-			</div>
-	  <!-- Initialize Swiper -->
-		  <script>
-		    var swiper = new Swiper('.swiper-container', {
-		      slidesPerView: 3,
-		      spaceBetween: 30,
-		      loop: true,
-		      navigation: {
-		        nextEl: '.swiper-button-next',
-		        prevEl: '.swiper-button-prev',
-		      },
-		    });
-		  </script>
-			<button class="examples__button">Заказать проект</button>
-		</div>
-	</section>
-	<section class="price">
-		<div class="prise__symbol prise__symbol_pos6 symbols__symbol_moveRight">{&nbsp;}</div>
-		<div class="prise__symbol prise__symbol_pos7 symbols__symbol_moveLeft">#</div>
-		<div class="prise__symbol prise__symbol_pos8 symbols__symbol_moveLeft">{&nbsp;}</div>
-		<div class="prise__symbol prise__symbol_pos9 symbols__symbol_moveRight">&lt;/&gt;</div>
-		<div class="prise__symbol prise__symbol_pos10 symbols__symbol_moveRight">&lt;div&gt;</div>
-		<div class="wrapper">
-			<h2>Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей всего за 4 часа.*</h2>
-			<p>* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, <br>в зависимости от сложности задач.</p>
-		</div>
-	</section>
-	<footer>
-		<div class="wrapper">
-			<div class="menu">
-				<nav>
-					<ul>
-						<li><a href="#">Услуги</a></li>
-						<li><a href="#">Портфолио</a></li>
-						<li><a href="#">Стоимость</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="contacts">
-				<a href="tel:+1234567890"><i class="fa fa-phone" aria-hidden="true"></i><span>+7 (499) 995-77-55</span></a>
-				<a href="mailto: example@mail.ru"><i class="fa fa-envelope" aria-hidden="true"></i><span>dmitry@alekseev.com</span></a>
-			</div>
-			<div class="social">
-				<button>Заказать звонок</button>
-				<ul class="share">
-						<li><a href="#" class="share__icon share__icon_shar1"></a></li>
-						<li><a href="#" class="share__icon share__icon_shar2"></a></li>
-						<li><a href="#" class="share__icon share__icon_shar3"></a></li>
-						<li><a href="#" class="share__icon share__icon_shar4"></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="copyright">
-			<p>&copy; Дмитрий Алексеев, 2016 - 2018</p>
-		</div>
-	</footer>
+  <div class="popup">
+    <div class="popup__wraper">
+      <input type="text" value="" class="popup__input">Имя
+      <input type="text" value="" class="popup__input">Телефон<br>
+      <input type="button" value="Заказать звонок" class="popup__button">
+    </div>
+  </div>
+  <div class="popup popup2">
+    <div class="popup__wraper">
+      <input type="text" value="" class="popup__input">Имя
+      <input type="text" value="" class="popup__input"><br>E-mail<br>
+      <input type="text" value="" class="popup__input">Телефон<br>
+      <input type="button" value="Заказать звонок" class="popup__button">
+    </div>
+  </div>
+  <header>
+    <div class="wrapper">
+      <div class="header__right">
+        <a href="#" class="header__burger">
+          <span class="header__span"></span>
+          <span class="header__span"></span>
+          <span class="header__span"></span>
+        </a>
+      </div>
+      <nav class="header__nav">
+        <a href="#" class="header__close">
+          <span class="header__span_close"></span>
+          <span class="header__span_close"></span>
+        </a>
+        <ul>
+          <li><a href=".works" class="header__link">Услуги</a></li>
+          <li><a href=".examples" class="header__link">Портфолио</a></li>
+          <li><a href=".price" class="header__link">Стоимость</a></li>
+        </ul>
+      </nav>
+      <div class="contact">
+        <a href="tel:+74999955577" class="contact__link">+7 (499) 995-55-77</a>
+        <button id="show-popup" class="contact__button show-popup">Заказать звонок</button>
+        <div class="contact__mobile-wrap">
+          <div class="contact__mobile">
+            <a href="tel:+74999955577"><i class="fa fa-phone" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="about">
+    <div class="symbols">
+      <div class="symbols__symbol symbols__symbol_pos1 symbols__symbol_moveLeft">
+        {&nbsp;}
+      </div>
+      <div class="symbols__symbol symbols__symbol_pos2 symbols__symbol_moveLeft">
+        #
+      </div>
+      <div class="symbols__symbol symbols__symbol_pos3 symbols__symbol_moveRight">
+        &lt;div&gt;
+      </div>
+      <div class="symbols__symbol symbols__symbol_pos4 symbols__symbol_moveLeft">
+        &lt;/&gt;
+      </div>
+      <div class="symbols__symbol symbols__symbol_pos5 symbols__symbol_moveRight">
+        &lt;div&gt;
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="person">
+        <h1 class="about__title">Дмитрий Алексеев</h1>
+        <p class="about__text">Frontend-разработчик и веб-верстальщик</p>
+        <button class="about__btn show-popup2">Узнать больше</button>
+      </div>
+      <div class="about__pic"><img src="img/person.png" alt="person" class="about__img"></div>
+    </div>
+  </section>
+  <section class="works">
+    <div class="wrapper">
+      <h2 class="works__title">Что я делаю</h2>
+      <div class="services">
+        <div class="services__service">
+          <img alt="tools" src="img/tools-and-utensils.png">
+          <p class="services__text">Вёрстка лендинг–страниц и&nbsp;сайтов любой сложности</p>
+        </div>
+        <div class="services__service">
+          <img alt="responsive" src="img/responsive.png">
+          <p class="services__text">Адаптивная вёрстка под&nbsp;все браузеры и устройства</p>
+        </div>
+        <div class="services__service">
+          <img alt="programming" src="img/programming.png">
+          <p class="services__text">Frontend–разработка и программирование</p>
+        </div>
+        <div class="services__service">
+          <img alt="coding" src="img/coding.png">
+          <p class="services__text">Исправление и доработка существующей вёрстки</p>
+        </div>
+      </div>
+      <button class="works__button show-popup2">Узнать стоимость</button>
+    </div>
+  </section>
+  <section class="examples">
+    <div class="wrapper">
+      <h2 class="examples__title">Примеры моих работ</h2>
+      <div class="swiper-button-prev">
+        <img src="img/arrow.png" alt="arrow_right" class="arrow">
+      </div>
+      <div class="swiper-button-next">
+        <img src="img/arrow.png" alt="arrow_left" class="arrow">
+      </div>
+      <div class="swiper-container examples">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="example__service2">
+              <img alt="hypno" src="img/Rectangle1.png" class="examples__img">
+              <p class="examples__text">Сайт психолога Веры Антоновой</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="example__service2">
+              <img alt="child" src="img/Rectangle2.png" class="examples__img">
+              <p class="examples__text">Сайт магазина детской одежды</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="example__service2">
+              <img alt="fish" src="img/Rectangle3.png" class="examples__img">
+              <p class="examples__text">Сайт магазина «Рыболов»</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".swiper-container", {
+          slidesPerView: "3",
+          spaceBetween: 30,
+          loop: true,
+          pagination: {
+            el: ".swiper-pagination"
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+          }
+        });
+      </script>
+      <button class="examples__button show-popup2">Заказать проект</button>
+    </div>
+  </section>
+  <section class="price">
+    <div class="price__symbol price__symbol_pos6 symbols__symbol_moveRight">
+      {&nbsp;}
+    </div>
+    <div class="price__symbol price__symbol_pos7 symbols__symbol_moveLeft">
+      #
+    </div>
+    <div class="price__symbol price__symbol_pos8 symbols__symbol_moveLeft">
+      {&nbsp;}
+    </div>
+    <div class="price__symbol price__symbol_pos9 symbols__symbol_moveRight">
+      &lt;/&gt;
+    </div>
+    <div class="price__symbol price__symbol_pos10 symbols__symbol_moveRight">
+      &lt;div&gt;
+    </div>
+    <div class="wrapper">
+      <h2 class="price__title">
+        Адаптивная вёрстка под все устройства и&nbsp;браузеры от 1000 рублей
+        всего за&nbsp;4&nbsp;часа.*
+      </h2>
+      <p class="price__text">
+        * Срок и стоимость могут отличаться от заявленных и рассчитываются
+        индивидуально, <br />&nbsp;&nbsp;&nbsp;в зависимости от сложности задач.
+      </p>
+    </div>
+  </section>
+  <footer>
+    <div class="wrapper">
+      <div class="menu">
+        <nav>
+          <ul class="menu__list">
+            <li><a href="#" class="menu__link">Услуги</a></li>
+            <li><a href="#" class="menu__link">Портфолио</a></li>
+            <li><a href="#" class="menu__link">Стоимость</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="contacts">
+        <a href="tel:+1234567890" class="contacts__link"><i class="fa fa-phone" aria-hidden="true"></i>
+          <span class="contacts__span">+7 (499)995-77-55</span></a>
+        <a href="mailto: example@mail.ru" class="contacts__link">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span class="contacts__span">dmitry@alekseev.com</span></a>
+      </div>
+      <div class="social">
+        <button class="social__button show-popup">Заказать звонок</button>
+        <ul class="social__list share">
+          <li><a href="#" class="share__icon share__icon_shar1"></a></li>
+          <li><a href="#" class="share__icon share__icon_shar2"></a></li>
+          <li><a href="#" class="share__icon share__icon_shar3"></a></li>
+          <li><a href="#" class="share__icon share__icon_shar4"></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; Дмитрий Алексеев, 2016 - 2018</p>
+    </div>
+  </footer>
+  <script>
+    let burger = document.querySelector(".header__burger");
+    let menu = document.querySelector(".header__nav");
+    let close = document.querySelector(".header__close");
+    burger.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.classList.add("header__nav__open");
+    });
+    close.addEventListener("click", function (e) {
+      e.preventDefault();
+      menu.classList.remove("header__nav__open");
+    });
+  </script>
 </body>
+
 </html>

@@ -208,17 +208,8 @@ body {
   overflow: hidden;
 }
 
-header {
-  margin: 0;
-}
-
-.header__burger {
+.header__cont {
   display: none;
-}
-
-.header__nav {
-  position: relative;
-  left: -200px;
 }
 
 .about__pic {
@@ -254,7 +245,7 @@ header {
   margin: 7px 0;
 }
 
-.header__close {
+.nav__btn_close {
   position: relative;
   display: none;
 }
@@ -284,7 +275,7 @@ header {
   height: 687px;
   background-image: url(../img/figure.svg);
   background-repeat: no-repeat;
-  background-position: 1105px 57px;
+  background-position: calc(100% + 106px) 57px;
 }
 
 .symbols__symbol {
@@ -420,7 +411,7 @@ header {
   flex-flow: column wrap;
 }
 
-header .wrapper {
+.header__wrapper {
   flex-direction: row;
   justify-content: space-between;
 }
@@ -456,20 +447,21 @@ header .wrapper {
   display: none;
 }
 
-ul {
+.nav__list {
   margin: 0;
   display: flex;
+  flex-direction: row;
   list-style-type: none;
   padding: 42px 0 20px 0;
 }
 
-header ul li:nth-child(2) a {
+.nav__item:nth-child(2) a {
   color: #f82370;
   padding-bottom: 1px;
   border-bottom: solid 1px #f82370;
 }
 
-li a {
+.nav__link {
   margin-right: 32px;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
@@ -518,7 +510,7 @@ h2 {
   color: #262626;
 }
 
-.services {
+.works__cont {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -528,7 +520,7 @@ h2 {
   padding-right: 20px;
 }
 
-.services__text {
+.works__text {
   color: #8993ad;
   padding-top: 0;
   line-height: 1.5;
@@ -536,7 +528,7 @@ h2 {
   font-weight: 400;
 }
 
-.services__service {
+.works__item {
   max-width: 24%;
   text-align: center;
   display: flex;
@@ -544,7 +536,7 @@ h2 {
   flex-direction: column;
 }
 
-button {
+.button_orange {
   cursor: pointer;
   margin-right: auto;
   margin-left: auto;
@@ -621,7 +613,7 @@ footer {
   background-color: white;
 }
 .copyright {
-  margin-top: 47px;
+  margin-top: 37px;
   padding: 3px 0 17px 0;
   background-color: #31293c;
   text-align: center;
@@ -640,13 +632,16 @@ footer .wrapper {
   align-content: stretch;
 }
 .menu__list {
+  padding-left: 0;
   padding-top: 74px;
-  padding-right: 290px;
+  padding-right: 319px;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
-
+.menu__item {
+  list-style-type: none;
+}
 .menu__link {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -714,22 +709,23 @@ footer .wrapper {
   padding-left: 130px;
   display: flex;
   flex-direction: row;
+  list-style-type: none;
 }
 
 .share__icon_shar1 {
-  background-position: -9px 0; /* вверх на 16px */
+  background-position: -9px -16px;
   cursor: pointer;
 }
 .share__icon_shar2 {
-  background-position: 150px 0; /* вверх на 16px */
+  background-position: 150px -12px;
   cursor: pointer;
 }
 .share__icon_shar3 {
-  background-position: 97px 0; /* вверх на 16px */
+  background-position: 97px -16px;
   cursor: pointer;
 }
 .share__icon_shar4 {
-  background-position: 44px 0; /* вверх на 16px */
+  background-position: 44px -16px;
   cursor: pointer;
 }
 
@@ -796,8 +792,17 @@ footer .wrapper {
   .swiper-pagination-bullet {
   margin: 14px 16px;
 }
+.contact__mobile {
+  display: none;
+}
 
 @media screen and (max-width: 1200px) {
+  .contact__mobile {
+    display: none;
+  }
+  .header__cont {
+    display: block;
+  }
   .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: 0px;
     left: 0;
@@ -864,7 +869,7 @@ footer .wrapper {
     height: 694px;
     background-image: url(../img/figure.svg);
     background-repeat: no-repeat;
-    background-position: 460px 163px;
+    background-position: calc(100% + 334px) 163px;
   }
   h1 {
     padding-top: 193px;
@@ -897,13 +902,13 @@ footer .wrapper {
     transition: opacity 0.3s, visibility 0.3s;
   }
 
-  .header__nav__open {
+  .header__nav_open {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.3s, visibility 0.3s;
   }
 
-  .header__close {
+  .nav__btn_close {
     position: absolute;
     left: 40px;
     top: 40px;
@@ -934,15 +939,15 @@ footer .wrapper {
     color: #fff;
   }
 
-  .header__burger {
+  .header__btn {
     display: block;
-    padding-top: 37px;
+    margin-top: 37px;
   }
-  .services__service {
+  .works__item {
     max-width: 42%;
     padding: 0 30px 58px 30px;
   }
-  .services__text {
+  .works__text {
     margin-top: 19px;
   }
   h2 {
@@ -954,7 +959,7 @@ footer .wrapper {
     padding-right: 0;
   }
 
-  .services {
+  .works__cont {
     padding: 0 80px;
   }
   .works__button {
@@ -1027,21 +1032,21 @@ footer .wrapper {
     padding-bottom: 74px;
   }
   .menu__list {
-    padding-right: 174px;
-    padding-top: 96px;
+    padding-right: 200px;
+    padding-top: 102px;
   }
   .contacts {
-    margin-top: 76px;
+    margin-top: 81px;
     margin-right: -17px;
   }
   .social__button {
-    top: 99px;
+    margin: 28px 0 0 3px;
   }
   .social__list {
-    padding-top: 118px;
+    padding: 94px 0 0 133px;
   }
   .copyright {
-    margin-top: 48px;
+    margin-top: 37px;
     padding: 3px 0 7px 0;
   }
 }
@@ -1049,6 +1054,10 @@ footer .wrapper {
 @media screen and (max-width: 600px) {
   .about {
     height: 594px;
+    background-image: url(../img/figure.svg);
+    background-repeat: no-repeat;
+    background-size: 0px auto;
+    background-position: calc(100% + 96px) 117px;
   }
   .wrapper {
     padding: 0 20px 0 20px;
@@ -1060,8 +1069,8 @@ footer .wrapper {
   .person {
     max-width: 280px;
   }
-  .header__burger {
-    padding-top: 31px;
+  .header__btn {
+    margin-top: 31px;
   }
 
   .header__span {
@@ -1075,21 +1084,7 @@ footer .wrapper {
   .contact__button {
     display: none;
   }
-  .contact__mobile-wrap {
-    display: block;
-    top: -5px;
-    max-width: 22px;
-    max-height: 22px;
-    border-radius: 25px;
-    padding: 1rem;
-    position: relative;
-    background: linear-gradient(to right, red, purple);
-    padding: 2px;
-  }
-  .contact__mobile-wrap i {
-    font-size: 10px;
-    margin-left: 5px;
-  }
+
   .contact {
     padding-top: 30px;
     display: -webkit-flex;
@@ -1098,14 +1093,30 @@ footer .wrapper {
     display: -o-flex;
     display: flex;
   }
-  .contact a {
+  .contact__link {
+    display: none;
     font-size: 15px;
     padding-right: 37px;
   }
-  .contact__mobile {
-    background: #fff;
-    border-radius: 25px;
+  .contact__button {
+    display: none;
   }
+  .contact__mobile {
+    display: block;
+    top: -5px;
+    max-width: 22px;
+    max-height: 22px;
+    padding-right: 5px;
+    border-radius: 25px;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, red, purple);
+    padding: 2px;
+  }
+.contact__link_mobile i {
+  font-size: 10px;
+  margin-left: 5px;
+}
   .about__title {
     font-size: 30px;
     margin: 232px 0 0 5px;
@@ -1120,7 +1131,7 @@ footer .wrapper {
     background-image: url(../img/figure.svg);
     background-repeat: no-repeat;
     background-size: 480px auto;
-    background-position: -63px 39px;
+    background-position: calc(100% + 96px) 37px;
   }
   .about__text {
     margin: 0;
@@ -1133,20 +1144,20 @@ footer .wrapper {
     height: 55px;
     margin-top: 23px;
   }
-  .services {
+  .works__cont {
     padding: 0;
   }
 
-  .services__service {
+  .works__item {
     max-width: 100%;
     padding: 0 28px 10px 25px;
   }
-  .services__service img {
+  .works__img {
     padding-top: 8px;
     padding-bottom: 9px;
     height: 57px;
   }
-  .services__text {
+  .works__text {
     margin-top: 5px;
     margin-bottom: 33px;
     padding-top: 0;
@@ -1223,7 +1234,8 @@ footer .wrapper {
     line-height: 2.3;
   }
   .contacts {
-    margin: 0;
+    margin-top: 20px;
+    margin-left: 0px;
   }
   .contacts__span {
     font-size: 16pt;
@@ -1236,8 +1248,8 @@ footer .wrapper {
   }
   .social__button {
     cursor: pointer;
-    left: 0;
-    top: 17px;
+    left: -4px;
+    top: -11px;
     font-size: 18px;
     width: 280px;
     height: 55px;
@@ -1247,10 +1259,10 @@ footer .wrapper {
   }
   .social__list {
     padding-left: 0;
-    padding-top: 55px;
+    padding-top: 25px;
   }
   .copyright {
-    margin-top: 18px;
+    margin-top: 10px;
   }
   footer p {
     font-size: 12.5px;

@@ -1,5 +1,5 @@
 $(function () {
-	$('.header__link').click((e) => {
+	$('.nav__link').click((e) => {
 		e.preventDefault();
 		let href = $(e.currentTarget).attr('href');
 
@@ -29,7 +29,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-	$(".show-popup2").click(function () {
+	$(".button_orange").click(function () {
 		$(".popup2").show();
 		$('body').addClass("stop-scrolling");
 		disableScroll();

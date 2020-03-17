@@ -20,21 +20,6 @@
 </head>
 
 <body>
-  <div class="popup">
-    <div class="popup__wraper">
-      <input type="text" value="" class="popup__input">Имя
-      <input type="text" value="" class="popup__input">Телефон<br>
-      <input type="button" value="Заказать звонок" class="popup__button">
-    </div>
-  </div>
-  <div class="popup popup2">
-    <div class="popup__wraper">
-      <input type="text" value="" class="popup__input">Имя
-      <input type="text" value="" class="popup__input"><br>E-mail<br>
-      <input type="text" value="" class="popup__input">Телефон<br>
-      <input type="button" value="Заказать звонок" class="popup__button">
-    </div>
-  </div>
   <header class="header">
     <div class="wrapper header__wrapper">
       <div class="header__cont">
@@ -58,10 +43,6 @@
       <div class="contact">
         <a href="tel:+74999955577" class="contact__link">+7 (499) 995-55-77</a>
         <button id="show-popup" class="contact__button show-popup">Заказать звонок</button>
-        <a href="tel:+74999955577" class="contact__link_mobile">+7 (499) 995-55-77</a>
-        <div class="contact__mobile show-popup">
-          <i class="fa fa-phone" aria-hidden="true"></i>
-        </div>
       </div>
     </div>
     </div>
@@ -229,6 +210,21 @@
       <p>&copy; Дмитрий Алексеев, 2016 - 2018</p>
     </div>
   </footer>
+  <div class="popup">
+    <div class="popup__wraper">
+      <input type="text" value="" class="popup__input">Имя
+      <input type="text" value="" class="popup__input">Телефон<br>
+      <input type="button" value="Заказать звонок" class="popup__button">
+    </div>
+  </div>
+  <div class="popup popup2">
+    <div class="popup__wraper">
+      <input type="text" value="" class="popup__input">Имя
+      <input type="text" value="" class="popup__input"><br>E-mail<br>
+      <input type="text" value="" class="popup__input">Телефон<br>
+      <input type="button" value="Заказать звонок" class="popup__button">
+    </div>
+  </div>
   <script>
     let burger = document.querySelector(".header__btn");
     let menu = document.querySelector(".header__nav");

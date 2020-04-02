@@ -203,12 +203,28 @@ body {
   margin: 20px auto;
 }
 
+.button_pink {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  height: 45px;
+  background-color: white;
+  color: #f82370;
+  border: solid 1px #f82370;
+  transition: 0.5s;
+}
+.button_pink:hover {
+  background-color: #f82370;
+  color: #fff;
+  box-shadow: 0 0 25px #ff85b1;
+}
+
 .stop-scrolling {
   height: 100vh;
   overflow: hidden;
 }
 
-.header__cont {
+.header__btn {
   display: none;
 }
 
@@ -426,20 +442,15 @@ body {
   letter-spacing: 1px;
   text-decoration: none;
   color: #000;
+  transition: 0.5s;
 }
 
 .contact__button {
   font-weight: bold;
-  position: relative;
-  cursor: pointer;
   margin-left: 20px;
   margin-top: 29px;
-  font-size: 16px;
   width: 207px;
-  height: 45px;
-  background-color: white;
-  color: #f82370;
-  border: solid 1px #f82370;
+
   z-index: 3;
 }
 
@@ -468,8 +479,11 @@ body {
   color: #000;
   text-decoration: none;
 }
+.nav__link:hover {
+  text-shadow: 0 0 15px #e9095b;
+}
 
-.person {
+.about__cont {
   flex-direction: column;
   background: rgba(0, 0, 0, 0);
   max-width: 1170px;
@@ -546,6 +560,13 @@ h2 {
   background: rgba(255, 78, 46, 1);
   color: white;
   border: 0;
+  transition: 0.5s;
+}
+
+.button_orange:hover {
+  background-color: #faa85b;
+  color: #fff;
+  box-shadow: 0 0 25px #ff85b1;
 }
 
 .works__button {
@@ -571,7 +592,7 @@ h2 {
   position: relative;
 }
 
-.example__service2 {
+.example__service {
   text-align: center;
   display: flex;
   align-items: center;
@@ -634,7 +655,7 @@ footer .wrapper {
 .menu__list {
   padding-left: 0;
   padding-top: 74px;
-  padding-right: 319px;
+  padding-right: 267px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -660,7 +681,6 @@ footer .wrapper {
   text-align: left;
   margin-top: 52px;
   margin-right: 70px;
-  margin-left: -20px;
 }
 .contacts__link {
   display: block;
@@ -675,6 +695,7 @@ footer .wrapper {
 .contacts__span {
   font-size: 25px;
   padding-right: 18px;
+  transition: 0.5s;
 }
 
 .fa {
@@ -691,16 +712,9 @@ footer .wrapper {
 }
 
 .social__button {
-  position: relative;
   top: 76px;
   left: 130px;
-  cursor: pointer;
-  font-size: 16px;
   width: 248px;
-  height: 45px;
-  background-color: white;
-  color: #f82370;
-  border: solid 1px #f82370;
   z-index: 3;
 }
 
@@ -712,19 +726,19 @@ footer .wrapper {
   list-style-type: none;
 }
 
-.share__icon_shar1 {
+.share__icon_vk {
   background-position: -9px -16px;
   cursor: pointer;
 }
-.share__icon_shar2 {
+.share__icon_fb {
   background-position: 150px -12px;
   cursor: pointer;
 }
-.share__icon_shar3 {
+.share__icon_tw {
   background-position: 97px -16px;
   cursor: pointer;
 }
-.share__icon_shar4 {
+.share__icon_inst {
   background-position: 44px -16px;
   cursor: pointer;
 }
@@ -735,6 +749,25 @@ footer .wrapper {
   width: 53px;
   height: 53px;
   background-image: url(../img/sprite.png);
+}
+
+.share__icon:hover {
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 5px;
+    margin-right: -5px;
+  }
+  100% {
+    margin-left: 0px;
+  }
 }
 /* swiper */
 .swiper-container {
@@ -796,12 +829,32 @@ footer .wrapper {
   display: none;
 }
 
+.contact__link:hover {
+  text-shadow: 0 0 25px #ff5392;
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+} 
+
+.contacts__span:hover {
+  text-shadow: 0 0 25px #ff5392;
+  animation-name: shake;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+} 
+
 @media screen and (max-width: 1200px) {
   .contact__mobile {
     display: none;
   }
-  .header__cont {
-    display: block;
+  .header__btn {
+    border: none;
+    background-color: #fff;
+    margin-top: 33px;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
   }
   .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
     bottom: 0px;
@@ -938,11 +991,6 @@ footer .wrapper {
   .header__nav ul li:nth-child(2) a {
     color: #fff;
   }
-
-  .header__btn {
-    display: block;
-    margin-top: 37px;
-  }
   .works__item {
     max-width: 42%;
     padding: 0 30px 58px 30px;
@@ -993,7 +1041,7 @@ footer .wrapper {
   .swiper-button-prev {
     display: none;
   }
-  .example__service2 img {
+  .example__service img {
     min-width: 456px;
   }
   .examples__text {
@@ -1032,7 +1080,7 @@ footer .wrapper {
     padding-bottom: 74px;
   }
   .menu__list {
-    padding-right: 200px;
+    padding-right: 148px;
     padding-top: 102px;
   }
   .contacts {
@@ -1062,17 +1110,19 @@ footer .wrapper {
   .wrapper {
     padding: 0 20px 0 20px;
   }
-  .works__title {
-    padding: 18px 0 10px 0;
+  .title {
     font-size: 30px;
   }
-  .person {
+  .works__title {
+    padding: 18px 0 10px 0; 
+  }
+  .about__cont {
     max-width: 280px;
   }
   .header__btn {
     margin-top: 31px;
+    margin-bottom: 7px;
   }
-
   .header__span {
     width: 25px;
     height: 3px;
@@ -1170,12 +1220,11 @@ footer .wrapper {
     height: 55px;
   }
   .examples__title {
-    font-size: 30px;
     padding: 0 20px 42px 20px;
     text-align: center;
     margin: 0;
   }
-  .example__service2 {
+  .example__service {
     margin: 0;
     padding: 0;
   }
@@ -1234,7 +1283,7 @@ footer .wrapper {
     line-height: 2.3;
   }
   .contacts {
-    margin-top: 20px;
+    margin-top: 4px;
     margin-left: 0px;
   }
   .contacts__span {

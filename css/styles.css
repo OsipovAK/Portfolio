@@ -1136,7 +1136,7 @@ footer .wrapper {
   }
 
   .contact {
-    padding-top: 30px;
+    padding-top: 26px;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -1144,11 +1144,22 @@ footer .wrapper {
     display: flex;
   }
   .contact__link {
-    display: none;
-    font-size: 15px;
-    padding-right: 37px;
+    padding-top: 4px;
+    font-size: 15.5px;
+    padding-right: 35px;
   }
   .contact__button {
+    border: solid 1px #f82370;
+    display: block;
+    margin: 0;
+    background-image: url("/img/call-answer.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+    border-radius: 20px;
+  }
+  .contact__text {
     display: none;
   }
   .contact__mobile {

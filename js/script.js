@@ -12,14 +12,14 @@ $(function () {
 });
 
 $(document).ready(function () {
-	$(".show-popup").click(function () {
-		$(".popup").show();
+	$(".button_pink").click(function () {
+		$(".popup1").show();
 		$('body').addClass("stop-scrolling");
 		disableScroll();
 
 	});
 
-	$(".popup").click(function (event) {
+	$(".popup1").click(function (event) {
 		if (event.target == this) {
 			$(this).hide();
 			$('body').removeClass("stop-scrolling");

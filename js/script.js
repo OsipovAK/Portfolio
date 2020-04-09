@@ -91,7 +91,7 @@ $(document).ready(function () {
 
 	$('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" }); //specifying options
 
-	$('input[type="mail"]').inputmask({
+	$('input[type="email"]').inputmask({
 		mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
 		greedy: false,
 		onBeforePaste: function (pastedValue, opts) {

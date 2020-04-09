@@ -176,24 +176,88 @@ body {
   z-index: 9999;
 }
 
-.popup__wraper {
+.popup__form {
   margin: 50px auto;
   padding: 20px;
-  max-width: 300px;
-  height: 300px;
+  max-width: 50%;
   text-align: center;
   background-color: white;
 }
 
-.popup__input {
-  width: 250px;
-  border: solid 1px #f82370;
+.popup__title {
+  font-size: 26px;
+  padding: 0;
+}
+
+.popup__label {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px;
   margin: 10px auto;
 }
 
+.popup__span {
+  min-width: 90px;
+  text-align: left;
+}
+
+.popup__input {
+  width: 100%;
+  border: solid 1px #f82370;
+  padding: 10px;
+}
+
+.popup__check {
+  display: flex;
+  text-align: start;
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  user-select: none;
+}
+
+.popup__check-input {
+  display: none;
+}
+
+.popup__check-input:checked + .popup__access::after {
+  opacity: 1;
+}
+
+.popup__access {
+  width: 100%;
+  position: relative;
+  padding-left: 30px;
+}
+
+.popup__access:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: solid 1px #f82370;
+  border-radius: 4px;
+}
+
+.popup__access::after {
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+  content: "\2714";
+  color: #f82370;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
 .popup__button {
-  font-weight: bold;
+  width: 100%;
   cursor: pointer;
   font-size: 16px;
   color: #f82370;
@@ -201,6 +265,14 @@ body {
   border: solid 1px #f82370;
   padding: 20px;
   margin: 20px auto;
+}
+
+.error {
+  background-color: #ff4e2e;
+}
+
+.popup__check-input:checked ~ input {
+  
 }
 
 .button_pink {
@@ -276,6 +348,10 @@ body {
   width: 45px;
   height: 6px;
   background: #fff;
+}
+
+.header__span_close:nth-child(2) {
+  margin: 0;
 }
 
 .header__span_close:first-child {
@@ -446,7 +522,6 @@ body {
 }
 
 .contact__button {
-  font-weight: bold;
   margin-left: 20px;
   margin-top: 29px;
   width: 207px;
@@ -470,6 +545,7 @@ body {
   color: #f82370;
   padding-bottom: 1px;
   border-bottom: solid 1px #f82370;
+  text-shadow: none;
 }
 
 .nav__link {
@@ -1350,5 +1426,26 @@ footer .wrapper {
   }
   .price__symbol_pos8 {
     display: none;
+  }
+  .popup__form {
+    margin: 5px auto;
+    padding: 5px;
+    max-width: 90%;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .popup__title {
+    font-size: 18px;
+    padding: 0;
+  }
+  
+  .popup__label {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 5px auto;
   }
 }

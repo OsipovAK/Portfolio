@@ -28,9 +28,9 @@
         <span class="header__span"></span>
       </button>
       <nav class="header__nav nav">
-        <a href="#" class="nav__btn_close">
-          <span class="header__span_close"></span>
-          <span class="header__span_close"></span>
+        <a href="#" class="nav__btn nav__btn_close">
+          <span class="header__span header__span_close"></span>
+          <span class="header__span header__span_close"></span>
         </a>
         <ul class="nav__list">
           <li class="nav__item"><a href="#works" class="nav__link">Услуги</a></li>
@@ -108,7 +108,7 @@
         <div class="swiper-button-next">
           <img src="img/arrow.png" alt="Стрелка влево" class="arrow">
         </div>
-        <div class="swiper-container examples">
+        <div class="swiper-container">
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
@@ -181,7 +181,7 @@
   <footer>
     <div class="wrapper">
       <div class="menu">
-        <nav>
+        <nav class="nav">
           <ul class="nav__list menu__list">
             <li class="nav__item menu__item"><a href="#works" class="nav__link menu__link">Услуги</a></li>
             <li class="nav__item menu__item"><a href="#examples" class="nav__link menu__link">Портфолио</a></li>
@@ -210,34 +210,48 @@
       <p>&copy; Дмитрий Алексеев, 2016 - 2018</p>
     </div>
   </footer>
-  <div class="popup1 popup">
-    <div class="popup__wraper">
-      <input type="text" value="" class="popup__input">Имя
-      <input type="text" value="" class="popup__input">Телефон<br>
-      <input type="button" value="Заказать звонок" class="popup__button">
-    </div>
+  <div class="popup1 popup" id="popup1">
+    <form class="popup__form">
+      <input type="hidden" name="project_name" value="Портфолио">
+      <input type="hidden" name="admin_email" value="osipovandrey1986@gmail.com">
+      <input type="hidden" name="form_subject" value="Ждите звонка">
+      <h2 class="popup__title">Заказ обратного звонка</h2>
+      <label class="popup__label"><span class="popup__span">Ф.И.О.</span><input type="text" name="ФИО"
+          class="popup__input"></label>
+      <label class="popup__label"><span class="popup__span">Телефон</span><input type="tel" name="Телефон"
+          placeholder="+7 (___) ___-____" class="popup__input"></label>
+      <label class="popup__label"><input type="submit" value="Заказать звонок" class="popup__button"
+          id="popup__button1"></label>
+      <label class="popup__check">
+        <input type="checkbox" class="popup__check-input" onchange="javascript:checkedSubmit1()" checked>
+        <span class="popup__access">Я даю Согласие на обработку моих персональных данных и подтверждаю ознакомление с
+          Положением об обработке персональных данных</span>
+      </label>
+    </form>
   </div>
-  <div class="popup2 popup">
-    <div class="popup__wraper">
-      <input type="text" value="" class="popup__input">Имя
-      <input type="text" value="" class="popup__input"><br>E-mail<br>
-      <input type="text" value="" class="popup__input">Телефон<br>
-      <input type="button" value="Заказать звонок" class="popup__button">
-    </div>
+  <div class="popup2 popup" id="popup2">
+    <form class="popup__form">
+      <input type="hidden" name="project_name" value="Портфолио">
+      <input type="hidden" name="admin_email" value="osipovandrey1986@gmail.com">
+      <input type="hidden" name="form_subject" value="Заявка с сайта">
+      <h2 class="popup__title">Получить прайс на мои услуги</h2>
+      <label class="popup__label"><span class="popup__span">E-mail</span><input type="mail" name="Почта"
+          class="popup__input"></label>
+      <label class="popup__label"><span class="popup__span">Ф.И.О.</span><input type="text" name="ФИО"
+          class="popup__input"></label>
+      <label class="popup__label"><span class="popup__span">Телефон</span><input type="tel" name="Телефон"
+          placeholder="+7 (___) ___-____" class="popup__input"></label>
+      <label class="popup__label"><input type="submit" value="Получить прайс" class="popup__button"
+          id="popup__button2"></label>
+      <label class="popup__check">
+        <input type="checkbox" class="popup__check-input" onchange="javascript:checkedSubmit2()" checked>
+        <span class="popup__access">Я даю Согласие на обработку моих персональных данных и подтверждаю ознакомление с
+          Положением об обработке персональных данных</span>
+      </label>
+    </form>
   </div>
-  <script>
-    let burger = document.querySelector(".header__btn");
-    let menu = document.querySelector(".header__nav");
-    let close = document.querySelector(".nav__btn_close");
-    burger.addEventListener("click", function (e) {
-      e.preventDefault();
-      menu.classList.add("header__nav_open");
-    });
-    close.addEventListener("click", function (e) {
-      e.preventDefault();
-      menu.classList.remove("header__nav_open");
-    });
-  </script>
+  <script src="/js/jquery.inputmask.min.js"></script>
+  <script src="/js/jquery.validate.min.js"></script>
 </body>
 
 </html>

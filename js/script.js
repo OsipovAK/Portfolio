@@ -1,3 +1,16 @@
+var swiper = new Swiper(".swiper-container", {
+	slidesPerView: "3",
+	spaceBetween: 30,
+	loop: true,
+	pagination: {
+		el: ".swiper-pagination"
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev"
+	}
+});
+
 function checkedSubmit1() {
 	var checkedItems = document.querySelectorAll('.popup input[id="popup__button1"]');
 	for (var i = 0; i < checkedItems.length; i++) {
@@ -21,76 +34,29 @@ $(document).ready(function () {
 		}, 700);
 	});
 
-	var keys = { 33: 1, 34: 1, 35: 1, 36: 1, 37: 1, 38: 1, 39: 1, 40: 1 };
-
-	function preventDefault(e) {
-		e = e || window.event;
-		if (e.preventDefault)
-			e.preventDefault();
-		e.returnValue = false;
-	};
-
-	function preventDefaultForScrollKeys(e) {
-		if (keys[e.keyCode]) {
-			preventDefault(e);
-			return false;
-		};
-	};
-
-	function disableScroll() {
-		if (window.addEventListener) // older FF
-			window.addEventListener("DOMMouseScroll", preventDefault, false);
-		window.onwheel = preventDefault; // modern standard
-		window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
-		document.body.addEventListener("touchmove", preventDefault, { passive: false });
-		document.onkeydown = preventDefaultForScrollKeys;
-		document.addEventListener("mousedown", function (event) {
-			if ($('body').hasClass('asd')) {
-				if (event.which === 2) {
-					event.stopPropagation();
-				}
-			}
-		});
-	};
-
-	function enableScroll() {
-		if (window.removeEventListener)
-			window.removeEventListener("DOMMouseScroll", preventDefault, false);
-		window.onmousewheel = document.onmousewheel = null;
-		window.onwheel = null;
-		document.body.removeEventListener("touchmove", preventDefault, { passive: false });
-		document.onkeydown = null;
-
-	};
-
 	$(".button_pink").click(function () {
 		$(".popup1").show();
 		$('body').addClass("stop-scrolling");
-		disableScroll();
 	});
 	$(".popup1").click(function (event) {
 		if (event.target == this) {
 			$(this).hide();
 			$('body').removeClass("stop-scrolling");
-			enableScroll();
 		};
 	});
 
 	$(".button_orange").click(function () {
 		$(".popup2").show();
 		$('body').addClass("stop-scrolling");
-		disableScroll();
 	});
 	$(".popup2").click(function (event) {
 		if (event.target == this) {
 			$(this).hide();
 			$('body').removeClass("stop-scrolling");
-			enableScroll();
 		};
 	});
 
-	$('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" }); //specifying options
-
+	$('input[type="tel"]').inputmask({ "mask": "+7 (999) 999-9999" });
 	$('input[type="email"]').inputmask({
 		mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]",
 		greedy: false,
@@ -133,6 +99,17 @@ $(document).ready(function () {
 				}).done(() => {
 					th.trigger('reset');
 				});
+
+				$(".popup").hide();
+				$(".popup3").show();
+				$('body').addClass("stop-scrolling");
+
+				$(".popup").click(function (event) {
+					if (event.target == this) {
+						$(this).hide();
+						$('body').removeClass("stop-scrolling");
+					};
+				});
 				return false;
 			}
 		});
@@ -148,5 +125,6 @@ $(document).ready(function () {
 		e.preventDefault();
 		menu.classList.remove("header__nav_open");
 	});
+
 
 });

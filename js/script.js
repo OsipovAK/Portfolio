@@ -114,7 +114,7 @@ $(document).ready(function () {
 			}
 		});
 	});
-	let burger = document.querySelector(".header__btn");
+	let burger = document.querySelector(".header__burger");
 	let menu = document.querySelector(".header__nav");
 	let close = document.querySelector(".nav__btn_close");
 	burger.addEventListener("click", function (e) {

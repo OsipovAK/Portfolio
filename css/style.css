@@ -1038,9 +1038,9 @@ h2 {
         color: #fff;
       }
 
-    /* .nav__list {
-        display: none;
-    } */
+    .nav__link {
+      font-size: 42px;
+    }
 
     .burger {
         display: block;

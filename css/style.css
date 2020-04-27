@@ -92,11 +92,10 @@ img {
     font-weight: 400;
     color: #1f1f24;
     margin-right: 28px;
-    transition: text-shadow 0.5s, color 0.5s, padding-bottom 0.5s, border-bottom 0.5s;
+    transition: text-shadow 0.5s, padding-bottom 0.5s, border-bottom 0.5s;
 }
 
 .nav__link:hover {
-  color: #f82370;
   padding-bottom: 1px;
   border-bottom: solid 1px #f82370;
   text-shadow: 0 0 15px #e9095b;
@@ -134,6 +133,12 @@ img {
     height: 60px;
     line-height: 60px;
     font-size: 18px;
+    transition: color 0.5s, backgroung-color 0.5s, border 0.5s;
+}
+.btn-fill:hover {
+  color: #ff4e2e;
+  background-color: #fff;
+  border: solid 1px #ff4e2e;
 }
 
 .button_pink {
@@ -1039,6 +1044,10 @@ h2 {
       }
 
     .nav__link {
+      font-size: 18px;
+    }
+
+    .white {
       font-size: 42px;
     }
 
@@ -1144,8 +1153,8 @@ h2 {
     }
 
     .header__btn {
-        width: 26px;
-        height: 26px;
+        width: 46px;
+        height: 46px;
         border: 1px solid #fa0891;
         border-radius: 100%;
         background-image: url("/img/call.png");
@@ -1181,7 +1190,7 @@ h2 {
     }
 
     .about__image {
-        margin-top: 56px;
+        margin-top: 82px;
     }
 }
 
@@ -1246,7 +1255,8 @@ h2 {
 
     .about__image {
         max-width: 230px;
-        margin-top: 25px;
+        height: 334px;
+        margin-top: 28px;
         margin-right: -57px;
     }
 
@@ -1255,7 +1265,7 @@ h2 {
     }
 
     .about-info {
-      padding-top: 32px;
+      padding-top: 11px;
       width: 100%;
     }
 
@@ -1295,6 +1305,10 @@ h2 {
   
     .header__span:nth-child(2) {
       margin: 4px 0;
+    }
+    .header__btn {
+      width: 26px;
+      height: 26px;
     }
     .contact__button {
       display: none;

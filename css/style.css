@@ -149,7 +149,7 @@ img {
   background-color: white;
   color: #f82370;
   border: solid 1px #f82370;
-  transition: 0.5s;
+  transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
 }
 .button_pink:hover {
   background-color: #f82370;
@@ -1558,5 +1558,6 @@ h2 {
       align-items: center;
       padding: 5px;
       margin: 5px auto;
+      
     }
 }

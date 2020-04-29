@@ -54,7 +54,11 @@ $(document).ready(function () {
 
 	$(".button_pink").click(function () {
 		$(".popup1").show();
+		$('.popup1').css('display', 'flex');
+		$('.popup1').css('align-items', 'center');
+		$('.popup__form').css('flex-direction', 'column');
 		$("html,body").css("overflow", "hidden");
+
 	});
 	$(".popup1").click(function (event) {
 		if (event.target == this) {
@@ -65,6 +69,9 @@ $(document).ready(function () {
 
 	$(".button_orange").click(function () {
 		$(".popup2").show();
+		$('.popup2').css('display', 'flex');
+		$('.popup2').css('align-items', 'center');
+		$('.popup__form').css('flex-direction', 'column');
 		$("html,body").css("overflow", "hidden");
 	});
 	$(".popup2").click(function (event) {

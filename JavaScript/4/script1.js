@@ -43,9 +43,10 @@ function printFullTime() {
         if (s1 == 1) { return 'секунда'; }
         return 'секунд';
     };
-    console.log('Сегодня ' + date + ' ' + month + ' ' + fullYear + ' года, ' + day + ', '
-        + h + ' ' + rusHours + ' ' + min + ' ' + minutes + ' ' + s + ' ' + rusSec);
+    var textFormat = 'Сегодня ' + date + ' ' + month + ' ' + fullYear + ' года, ' + day + ', '
+        + h + ' ' + rusHours + ' ' + min + ' ' + minutes + ' ' + s + ' ' + rusSec;
+    document.getElementById('clock').innerHTML = '<b>' + textFormat + '</b>';
+
 };
 
 let timerId = setInterval(printFullTime, 1000);
-setTimeout(() => { clearInterval(timerId); alert('Отсчитали 10 секунд'); }, 10000);

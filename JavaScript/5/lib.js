@@ -25,6 +25,7 @@
             }
             while (s < 4) {
                 gameAgain = confirm("Сыграем еще?") ? 1 : 0;
+                attemp = 10;
                 number = random(1000);
             }
         }
@@ -38,6 +39,7 @@
                 s = 4;
                 return s;
             } else if (answer != number && answer != null) {
+                answer = parseInt(answer);
                 if (answer < number) {
                     alert('Больше!');
                     s = 1;

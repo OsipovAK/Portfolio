@@ -2,7 +2,7 @@
 // console.log(a);
 (function () {
     var answer = 0;
-    var s = 0;
+    var returnFunc = 0;
     var gameAgain = 1;
     var attemp = 10;
     window.start = function () {
@@ -10,7 +10,7 @@
         while (gameAgain > 0) {
             do {
                 answer = prompt('Введите число от 1 до 1000! У вас осталось ' + attemp + ' попыток!');
-                s = checkAnswer(number, answer);
+                returnFunc = checkAnswer(number, answer);
                 attemp--;
                 if (attemp == 0) {
                     var endAttemp = confirm("Попытки закончились! Сыграем еще?") ? 1 : 0;
@@ -18,12 +18,12 @@
                         attemp = 10;
                         number = random(1000);
                     } else {
-                        s = 4;
+                        returnFunc = 4;
                         gameAgain = 0;
                     }
                 }
             }
-            while (s < 4) {
+            while (returnFunc < 4) {
                 gameAgain = confirm("Сыграем еще?") ? 1 : 0;
                 attemp = 10;
                 number = random(1000);
@@ -36,27 +36,27 @@
         function checkAnswer(number, answer) {
             if (answer == null) {
                 alert('игра заканчивается');
-                s = 4;
-                return s;
+                returnFunc = 4;
+                return returnFunc;
             } else if (answer != number && answer != null) {
                 answer = parseInt(answer);
                 if (answer < number) {
                     alert('Больше!');
-                    s = 1;
-                    return s;
+                    returnFunc = 1;
+                    return returnFunc;
                 } else if (answer > number) {
                     alert('Меньше!');
-                    s = 2;
-                    return s;
+                    returnFunc = 2;
+                    return returnFunc;
                 } else if (answer != parseInt(answer)) {
                     alert('Вы ввели не число. Введите число!');
-                    s = 3;
-                    return s;
+                    returnFunc = 3;
+                    return returnFunc;
                 }
             } else {
                 alert('Правильно!');
-                s = 4;
-                return s;
+                returnFunc = 4;
+                return returnFunc;
             }
         };
     };
